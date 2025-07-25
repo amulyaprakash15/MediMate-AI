@@ -1,0 +1,40 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MediMate AI - Health Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>MediMate 🩺 AI Health Assistant</h1>
+
+    <div class="card">
+      <h2>Disease Detection</h2>
+      <form id="diseaseForm">
+        <textarea name="symptoms" rows="4" placeholder="Describe your symptoms here..." required></textarea>
+        <button type="submit">Detect Disease</button>
+      </form>
+
+      <div id="resultBox" class="hidden">
+        <p><strong>Disease:</strong> <span id="disease"></span></p>
+        <p><strong>Prescription:</strong> <span id="prescription"></span></p>
+        <p><strong>Diet Suggestion:</strong> <span id="diet"></span></p>
+        <p><strong>Urgency:</strong> <span id="urgency"></span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Chat with MediMate 🤖</h2>
+      <div id="chatBox" class="chat-box"></div>
+      <form id="chatForm">
+        <input type="text" id="chatInput" placeholder="Ask me anything health-related..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

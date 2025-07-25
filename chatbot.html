@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with MediMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💬 MediMate HealthBot</h1>
+        <div id="chatBox"></div>
+        <input id="userInput" placeholder="Ask me anything..." />
+        <button onclick="sendMessage()">Send</button>
+        <a href="/">🔙 Back</a>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
